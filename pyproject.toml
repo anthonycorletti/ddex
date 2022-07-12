@@ -6,6 +6,7 @@ build-backend = "flit_core.buildapi"
 name = "ddex"
 authors = [{name = "Anthony Corletti", email = "anthcor@gmail.com"}]
 dynamic = ["version", "description"]
+readme = "README.md"
 requires-python = ">=3.8"
 dependencies = []
 
