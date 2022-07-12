@@ -1,0 +1,9 @@
+[run]
+source =
+    ddex
+    tests
+
+omit =
+    *__init__.py
+
+parallel = True
