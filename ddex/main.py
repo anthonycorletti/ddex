@@ -1,13 +1,20 @@
+import os
 from typing import Dict, Optional
+from urllib.request import urlretrieve
 from uuid import UUID
+
+import xmlschema
+from xmlschema.validators.schemas import XMLSchemaBase
+
+from ddex.exc import DDEXException
 
 
 class DDEXSchema:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, schema: XMLSchemaBase) -> None:
+        self.schema = schema
 
 
-class DDEX:
+class DDEXDocument:
     def __init__(self, id: UUID, ddex_schema: DDEXSchema) -> None:
         pass
 
@@ -21,21 +28,39 @@ class DDEX:
         pass
 
 
-def _load_file(path: str) -> str:
+def _download_remote_file(url: str) -> str:
+    filename = os.path.basename(url)
+    urlretrieve(url, filename)
+    return filename
+
+
+def _path_is_url(path: str) -> bool:
+    return path.startswith("http")
+
+
+def _is_xsd(path: str) -> bool:
+    return path.endswith(".xsd")
+
+
+def load_ddex_xsd_schema(path: str) -> DDEXSchema:
+    if not _is_xsd(path):
+        raise DDEXException("Not an XSD file.")
+
+    filepath = path
+    if _path_is_url(path):
+        filepath = _download_remote_file(path)
+
+    xsd_content = xmlschema.XMLSchema(filepath)
+    return DDEXSchema(schema=xsd_content)
+
+
+def xml_to_ddex(path: str, schema: DDEXSchema) -> DDEXDocument:
     pass
 
 
-def load_ddex_xsd_file(path: str) -> DDEXSchema:
+def json_to_ddex(path: str, schema: DDEXSchema) -> DDEXDocument:
     pass
 
 
-def load_ddex_xml_file(path: str, schema: DDEXSchema) -> DDEX:
-    pass
-
-
-def load_ddex_json_file(path: str, schema: DDEXSchema) -> DDEX:
-    pass
-
-
-def load_ddex_dict(data: Dict, schema: DDEXSchema) -> DDEX:
+def dict_to_ddex(data: Dict, schema: DDEXSchema) -> DDEXDocument:
     pass
