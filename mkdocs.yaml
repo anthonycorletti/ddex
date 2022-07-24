@@ -1,0 +1,64 @@
+site_name: ddex
+site_description: A Python DDEX implementation.
+site_url: https://ddex.corletti.xyz
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github-alt
+    logo: material/playlist-music
+    favicon: material/playlist-music
+
+repo_name: anthonycorletti/ddex
+repo_url: https://github.com/anthonycorletti/ddex
+edit_uri: ""
+
+nav:
+  - Welcome: index.md
+  - Development & Contributing: contributing.md
+  - Release Notes: release-notes.md
+
+markdown_extensions:
+  - toc:
+      title: On this page
+      permalink: true
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - admonition
+  - codehilite
+  - extra
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format ""
+  - pymdownx.tabbed:
+      alternate_style: true
+  - mdx_include:
+      base_path: docs
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  # analytics:
+  #   provider: google
+  #   property: UA-ABC1234567-1
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/anthonycorletti/ddex
+    - icon: fontawesome/solid/globe
+      link: https://ddex.corletti.xyz

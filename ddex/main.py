@@ -2,6 +2,7 @@ import os
 from typing import Dict, Optional
 from urllib.request import urlretrieve
 from uuid import UUID
+from xml.etree import ElementTree
 
 import xmlschema
 from xmlschema.validators.schemas import XMLSchemaBase
@@ -38,19 +39,19 @@ def _path_is_url(path: str) -> bool:
     return path.startswith("http")
 
 
-def _is_xsd(path: str) -> bool:
-    return path.endswith(".xsd")
+# def _is_xsd(path: str) -> bool:
+#     return path.endswith(".xsd")
 
 
 def load_ddex_xsd_schema(path: str) -> DDEXSchema:
-    if not _is_xsd(path):
-        raise DDEXException("Not an XSD file.")
-
     filepath = path
     if _path_is_url(path):
         filepath = _download_remote_file(path)
 
-    xsd_content = xmlschema.XMLSchema(filepath)
+    try:
+        xsd_content = xmlschema.XMLSchema(filepath)
+    except (xmlschema.XMLSchemaException, ElementTree.ParseError) as e:
+        raise DDEXException(e)
     return DDEXSchema(schema=xsd_content)
 
 
