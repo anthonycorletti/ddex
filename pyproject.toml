@@ -10,6 +10,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "xmlschema >=1.11.0",
+    "xmltodict >=0.12.0",
+    "lxml >=4.4.2",
 ]
 
 [project.optional-dependencies]
