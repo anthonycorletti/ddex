@@ -60,9 +60,9 @@ DDEX is a standard for the exchange of data between parties. Data specifically f
 
 To learn more about DDEX, visit the following links:
 
-- DDEX Website: [https://ddex.net](https://ddex.net)
-- DDEX Knowledge Base: [https://kb.ddex.net](https://kb.ddex.net)
-- DDEX XML Content Library: [http://service.ddex.net/xml/](http://service.ddex.net/xml/)
+- DDEX Website: <a href="https://ddex.net", target="_blank">https://ddex.net</a>
+- DDEX Knowledge Base: <a href="https://kb.ddex.net", target="_blank">https://kb.ddex.net</a>
+- DDEX XML Content Library: <a href="http://service.ddex.net/xml/", target="_blank">http://service.ddex.net/xml/</a>
 
 ## So what can I do with this library?
 
