@@ -12,7 +12,11 @@ dependencies = [
     "xmlschema >=1.11.0",
     "xmltodict >=0.12.0",
     "lxml >=4.4.2",
+    "xsdata[cli,lxml] >=22.7",
 ]
+
+[project.urls]
+Documentation = "https://www.github.com/anthonycorletti/ddex"
 
 [project.optional-dependencies]
 test = [
@@ -37,6 +41,3 @@ dev = [
 
 [tool.isort]
 profile = "black"
-
-[project.urls]
-Documentation = "https://www.github.com/anthonycorletti/ddex"

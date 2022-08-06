@@ -26,11 +26,15 @@
 
 A Python DDEX implementation.
 
-Create, validate, and transform DDEX content with XML, python objects, JSON, and more.
+Some tasty features are:
+
+* **XML Support**: Create and validate DDEX XML documents.
+* **JSON**: Transform DDEX documents to JSON documents and vice versa.
+* **Python Objects**: Create and validate DDEX documents with python objects and vice versa.
 
 ## Requirements
 
-Python 3.7+
+Python 3.8+
 
 ## Installation
 
@@ -40,4 +44,28 @@ pip install ddex
 
 ## A Quick Example
 
-Coming soon 🎶
+```Python
+{!../docs_src/generate_simple_ddex_document.py!}
+```
+
+## What is DDEX?
+
+DDEX is a standard for the exchange of data between parties. Data specifically for digitial content supply chains. Think of it as the metadata standard for describing how digital content is distributed around to the services that supply the world with movies, music, and multimedia.
+
+To learn more about DDEX, visit the following links:
+
+- DDEX Website: https://ddex.net
+- DDEX Knowledge Base: https://kb.ddex.net
+- DDEX XML Content Library: http://service.ddex.net/xml/
+
+## So what can I do with this library?
+
+Install it and use it in a server-side api for validating and creating DDEX documents and schemas, or for a batch processing service that's transforming data from one  multimedia metadata content standard to another. This library should support all DDEX content standards that python can parse.
+
+## How can I help?
+
+Please open an [issue](https://github.com/anthonycorletti/ddex/issues/new/choose) on GitHub. Pull requests are also very welcome. Checkout our [contributing guide](contributing.md) to get started.
+
+&nbsp;
+
+&nbsp;

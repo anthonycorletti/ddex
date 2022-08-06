@@ -2,10 +2,11 @@
 
 __version__ = "0.0.1-alpha"
 
-from ddex.main import (
+from ddex.ddex import (
     DDEXDocument,
     DDEXSchema,
     dict_to_ddex,
+    generate_ddex_module,
     json_to_ddex,
     load_ddex_xsd_schema,
     xml_to_ddex,
@@ -18,4 +19,5 @@ __all__ = [
     "dict_to_ddex",
     "DDEXDocument",
     "DDEXSchema",
+    "generate_ddex_module",
 ]

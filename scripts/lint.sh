@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-mypy ddex tests
-flake8 ddex tests
-black ddex tests --check
-isort ddex tests scripts --check-only
+mypy ddex tests docs_src
+flake8 ddex tests docs_src
+black ddex tests docs_src --check
+isort ddex tests docs_src --check-only

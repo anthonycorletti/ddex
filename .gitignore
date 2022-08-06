@@ -142,6 +142,4 @@ cython_debug/
 *.lock
 
 tmp/
-*.xsd
-*.xml
 *.json
