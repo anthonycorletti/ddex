@@ -45,7 +45,10 @@ pip install ddex
 ## A Quick Example
 
 ```Python
-{!../docs_src/generate_simple_ddex_document.py!}
+from ddex import xml_to_ddex
+
+ddex = xml_to_ddex(path="Audio.xml")
+ddex.assert_valid()
 ```
 
 ## What is DDEX?
