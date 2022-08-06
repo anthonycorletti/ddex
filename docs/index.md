@@ -14,6 +14,9 @@
 <a href="https://codecov.io/gh/anthonycorletti/ddex" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/anthonycorletti/ddex?color=%2334D058" alt="Coverage">
 </a>
+<a href="https://pypi.org/project/ddex/" target="_blank">
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/ddex?color=blue">
+</a>
 </p>
 
 ---
