@@ -70,7 +70,7 @@ Install it and use it in a server-side api for validating and creating DDEX docu
 
 ## How can I help?
 
-Please open an [issue](https://github.com/anthonycorletti/ddex/issues/new/choose) on GitHub. Pull requests are also very welcome. Checkout our [contributing guide](contributing.md) to get started.
+Please open an [issue](https://github.com/anthonycorletti/ddex/issues/new/choose) on GitHub. Pull requests are also very welcome. Checkout our [contributing guide](https://github.com/anthonycorletti/ddex/blob/main/CONTRIBUTING.md) to get started.
 
 &nbsp;
 
